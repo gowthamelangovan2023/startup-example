@@ -1,0 +1,204 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Analysis Prediction</title>
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-image: url('static/startup-analysis.jpg');
+        background-repeat: no-repeat;
+        background-size: auto 1300px;
+        background-position: center;
+    }
+
+    #predict-id {
+        margin: 140px auto;
+    }
+
+    #predict-id form {
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-bottom: 40px;
+    }
+
+    .form-datas {
+        margin: 22px auto;
+    }
+
+    input,
+    select,
+    textarea {
+        color: #191970 !important;
+        font-size: 23px;
+    }
+
+    .form-control {
+        padding: 40px 10px !important;
+        font-size: 20px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid #1E90FF !important;
+    }
+
+    select {
+        width: 450px;
+        height: 60px;
+        padding: 10px 15px;
+        font-size: 25px;
+        border: 2px solid #ccc;
+    }
+
+    #btn-ids {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    #predict {
+        border-radius: 5px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 280px;
+        height: 70px;
+        font-size: 25px;
+        padding: 15px 20px;
+        color: white !important;
+        border: #1E90FF !important;
+        background-color: #1E90FF;
+        letter-spacing: 0.08rem;
+    }
+    #result{
+    margin-top: 120px!important;
+    }
+   #result #output{
+        font-family:Monospace;
+        font-size: 40px;
+        font-weight: 700;
+        color: navy;
+        text-align: center;
+        text-transform: capitalize;
+    }
+     .goback{
+        font-size: 25px;
+        color: navy;
+        font-weight: 600;
+        margin-left: 15px;
+        text-decoration: underline;
+    }
+    .goback:hover{
+        color: navy;
+        font-size: 35px;
+    }
+</style>
+
+
+    <body>
+     <div class="container" id="predict-id">
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="{{ url_for('predict')}}" method="post">
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="founded_at" class="form-control" placeholder="Founded Year"
+                            autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="first_funding_at" class="form-control"
+                            placeholder="First Funding Year" autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="last_funding_at" class="form-control" placeholder="Last Funding Year"
+                            autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="funding_rounds" class="form-control" placeholder="Funding Rounds"
+                            autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="funding_total_usd" class="form-control" placeholder="Total Funding (USD)"
+                            autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="first_milestone_at" class="form-control"
+                            placeholder="First Milestone Year" autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="last_milestone_at" class="form-control"
+                            placeholder="Last Milestone  Year" autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="milestones" class="form-control" placeholder="Milestones" autofocus />
+                    </div>
+                    <div class="col-lg-4 form-datas">
+                        <input type="text" name="relationships" class="form-control" placeholder="Relationships"
+                            autofocus />
+                    </div>
+                    <div class="col-lg-6 form-datas" style="padding-left: 20px;">
+                        <select name="sector" id="sector" autofocus>
+                            <option selected disabled> Select the Sector</option>
+                            <option value="advertising">advertising</option>
+                            <option value="biotech">biotech</option>
+                            <option value="consulting">consulting</option>
+                            <option value="ecommerce">ecommerce</option>
+                            <option value="education">education</option>
+                            <option value="enterprise">enterprise</option>
+                            <option value="games_video">games_video</option>
+                            <option value="hardware">hardware</option>
+                            <option value="mobile">mobile</option>
+                            <option value="network_hosting">network hosting</option>
+                            <option value="other">other</option>
+                            <option value="public_relations">public relations</option>
+                            <option value="search">search</option>
+                            <option value="software">software</option>
+                            <option value="web">web</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 form-datas" style="padding-left: 40px;">
+                        <select name="country" id="country" autofocus>
+                            <option selected disabled> Select the Country</option>
+                            <option value="AUS">AUS</option>
+                            <option value="CAN">CAN</option>
+                            <option value="DEU">DEU</option>
+                            <option value="ESP">ESP</option>
+                            <option value="FRA">FRA</option>
+                            <option value="GBR">GBR</option>
+                            <option value="IND">IND</option>
+                            <option value="USA">USA</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-12" id="btn-ids">
+                        <input type="submit" name="Predict" id="predict" value="Predict">
+                        <a href="{{ url_for('home')}}" class="btn goback">Lets back home</a>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container"  id="result">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 id="output">
+                  {{ pred }}
+                 </h3>
+
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>
