@@ -431,16 +431,16 @@ def predict():
         output_rf=(prediction_rf[0])
         print("output_qda:",output_qda)
         print("output_rf:",output_rf)
-        if output_qda==1 & output_rf==1:
-           return render_template('form.html',pred='company is opened and its operating!',bhai="well done")
-        elif output_qda==1 & output_rf==2:
-           return render_template('form.html',pred='company is opened and it is in IPO.!',bhai="well done")
+        if output_qda==1 :
+           return render_template('form.html',pred='Company is Opened!',bhai="well done")
+        elif output_qda==0 & output_rf ==1:
+           return render_template('form.html',pred='Company is Operating!',bhai="well done")
+        elif output_rf==2 & output_qda==0:
+           return render_template('form.html',pred='company is in IPO !!',bhai="welldone" )
         elif output_rf==3 & output_qda==0:
-           return render_template('form.html',pred='company is closed and it is in acquired !!',bhai="sorry failed to success")
-        elif output_rf==0 & output_qda==0:
-           return render_template('form.html',pred='company is closed!!!!Danger',bhai="sorry failed to success")
+           return render_template('form.html',pred='company is Acquired!!!!Danger',bhai="sorry failed to success")
         else:
-           return render_template('form.html',pred='Please enter the value again !!',bhai="sorry failed to success")
+           return render_template('form.html',pred='The company is closed !!',bhai="sorry failed to success")
     else:
         return render_template('form.html')
 
