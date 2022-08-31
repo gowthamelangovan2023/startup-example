@@ -1,204 +1,118 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Analysis Prediction</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>FlexStart Bootstrap Template - Index</title>
+    <meta content="" name="description">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta content="" name="keywords">
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="/static/css/home.css" rel="stylesheet">
+
+
 </head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top mb-5">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+<!--            <a href="index.html" class="logo d-flex align-items-center">-->
+<!--                <img src="Important Factors for Startup Success_Open Graph Image.png" alt="">-->
+<!--                <i class="bi bi-clipboard-data"></i>-->
+<!--                <span>StarAnalysis</span>-->
+
+<!--            </a>-->
+
+            <nav id="navbar" class="navbar">
+
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
 <style>
-    body {
-        padding: 0;
-        margin: 0;
-        background-image: url('static/startup-analysis.jpg');
-        background-repeat: no-repeat;
-        background-size: auto 1300px;
-        background-position: center;
-    }
-
-    #predict-id {
-        margin: 140px auto;
-    }
-
-    #predict-id form {
-        border-radius: 5px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        margin-bottom: 40px;
-    }
-
-    .form-datas {
-        margin: 22px auto;
-    }
-
-    input,
-    select,
-    textarea {
-        color: #191970 !important;
-        font-size: 23px;
-    }
-
-    .form-control {
-        padding: 40px 10px !important;
-        font-size: 20px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 3px solid #1E90FF !important;
-    }
-
-    select {
-        width: 450px;
-        height: 60px;
-        padding: 10px 15px;
-        font-size: 25px;
-        border: 2px solid #ccc;
-    }
-
-    #btn-ids {
+    .btn{
         text-align: center;
-        margin-top: 40px;
+        font-size: 22px;
+        font-weight: 500;
+        padding: 15px;
     }
-
-    #predict {
-        border-radius: 5px;
-        text-transform: uppercase;
+    .btn:hover{
         text-align: center;
-        width: 280px;
-        height: 70px;
-        font-size: 25px;
-        padding: 15px 20px;
-        color: white !important;
-        border: #1E90FF !important;
-        background-color: #1E90FF;
-        letter-spacing: 0.08rem;
+        font-size: 26px;
+        font-weight: 500;
+        padding: 18px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
-    #result{
-    margin-top: 120px!important;
-    }
-   #result #output{
-        font-family:Monospace;
-        font-size: 40px;
-        font-weight: 700;
-        color: navy;
-        text-align: center;
-        text-transform: capitalize;
-    }
-     .goback{
-        font-size: 25px;
-        color: navy;
-        font-weight: 600;
-        margin-left: 15px;
-        text-decoration: underline;
-    }
-    .goback:hover{
-        color: navy;
-        font-size: 35px;
+    .img-fluid{
+    max-width: 150%!important;
     }
 </style>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero starAnalysis align-items-center">
 
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6 starAnalysis star-column justify-content-center">
+                    <h1 data-aos="fade-up-right" class="title" style="font-size: 60px;color: navy;">We offer modern solutions to guide your
+                        investment</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400" style="font-size: 25px; color: black;font-weight: 400;margin: 30px 0px;line-height: 35px;">Given a startup's financial information, we provide you
+                        predictions of its current financial status for better investment choices. </h2>
+                    <br>
 
-    <body>
-     <div class="container" id="predict-id">
-        <div class="row">
-            <div class="col-lg-12">
-                <form action="{{ url_for('predict')}}" method="post">
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="founded_at" class="form-control" placeholder="Founded Year"
-                            autofocus />
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-center text-lg-start">
+                            <a href="{{ url_for('form')}}"
+                                class="btn btn-primary btn-get-started scrollto star-inline-analysis align-items-center justify-content-center align-self-center">
+                                <span >Get Started</span>&nbsp;&nbsp;
+                             <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="first_funding_at" class="form-control"
-                            placeholder="First Funding Year" autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="last_funding_at" class="form-control" placeholder="Last Funding Year"
-                            autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="funding_rounds" class="form-control" placeholder="Funding Rounds"
-                            autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="funding_total_usd" class="form-control" placeholder="Total Funding (USD)"
-                            autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="first_milestone_at" class="form-control"
-                            placeholder="First Milestone Year" autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="last_milestone_at" class="form-control"
-                            placeholder="Last Milestone  Year" autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="milestones" class="form-control" placeholder="Milestones" autofocus />
-                    </div>
-                    <div class="col-lg-4 form-datas">
-                        <input type="text" name="relationships" class="form-control" placeholder="Relationships"
-                            autofocus />
-                    </div>
-                    <div class="col-lg-6 form-datas" style="padding-left: 20px;">
-                        <select name="sector" id="sector" autofocus>
-                            <option selected disabled> Select the Sector</option>
-                            <option value="advertising">advertising</option>
-                            <option value="biotech">biotech</option>
-                            <option value="consulting">consulting</option>
-                            <option value="ecommerce">ecommerce</option>
-                            <option value="education">education</option>
-                            <option value="enterprise">enterprise</option>
-                            <option value="games_video">games_video</option>
-                            <option value="hardware">hardware</option>
-                            <option value="mobile">mobile</option>
-                            <option value="network_hosting">network hosting</option>
-                            <option value="other">other</option>
-                            <option value="public_relations">public relations</option>
-                            <option value="search">search</option>
-                            <option value="software">software</option>
-                            <option value="web">web</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-6 form-datas" style="padding-left: 40px;">
-                        <select name="country" id="country" autofocus>
-                            <option selected disabled> Select the Country</option>
-                            <option value="AUS">AUS</option>
-                            <option value="CAN">CAN</option>
-                            <option value="DEU">DEU</option>
-                            <option value="ESP">ESP</option>
-                            <option value="FRA">FRA</option>
-                            <option value="GBR">GBR</option>
-                            <option value="IND">IND</option>
-                            <option value="USA">USA</option>
-                            <option value="other">other</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-12" id="btn-ids">
-                        <input type="submit" name="Predict" id="predict" value="Predict">
-                        <a href="{{ url_for('home')}}" class="btn goback">Lets back home</a>
-                    </div>
-                </form>
-
-            </div>
-
-        </div>
-    </div>
-    <div class="container"  id="result">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 id="output">
-                  {{ pred }}
-                 </h3>
-
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 hero-img/" data-aos="zoom-out" data-aos-delay="100" id="banner-img">
+                    <img src="https://img.freepik.com/free-vector/coach-speaking-before-audience-mentor-presenting-charts-reports-employees-meeting-business-training-seminar-conference-vector-illustration-presentation-lecture-education_74855-8294.jpg?w=2000"
+                        class="img-fluid" alt="startup-image">
+                </div>
             </div>
         </div>
 
-    </div>
-    </body>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+    </main><!-- End #main -->
+
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    
+
+</body>
+
 </html>
